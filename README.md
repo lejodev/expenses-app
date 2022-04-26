@@ -13,11 +13,11 @@ This is the client version of the expenses app.
 - It's necessary to have docker installed on your machine
 
 - Once on the project root. Type  
-`docker build -t expenses-app`
+`docker build -t expenses-app-image .`
 
-- Once you have the Docker image on your local. Type  `docker run -d expenses-app`.
+- Once you have the Docker image on your local. Type  `docker run -d --name expenses-app-container -p 3001:3000 expenses-app`
 
-- Then. You can run your this project on `http://localhost:3000`
+- Then. You can run your this project on `http://localhost:3001`
 
 ## Run locally with IDE
 

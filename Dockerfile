@@ -1,7 +1,13 @@
 FROM node:latest
+
 WORKDIR /app
+
 COPY package.json ./
+
 COPY package-lock.json ./
-COPY ./ ./
+
+COPY . ./
+
 RUN npm i
+
 CMD ["npm", "run", "start"]

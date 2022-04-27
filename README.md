@@ -19,7 +19,7 @@ This is the client version of the expenses app.
 
 - Then. You can run your this project on `http://localhost:3001`
 
-## Run locally with CMD
+## Run locally inside the project
 
 - Clone this repository on your machine
 

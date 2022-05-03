@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Helper from "../../../../util/Helper";
+import Helper from "../../../util/Helper";
 
-const AddExpense = () => {
+const AddExpense = ({ passData }) => {
   const [expense, setExpense] = useState("");
   const categories = [
     "sports",
@@ -11,9 +11,11 @@ const AddExpense = () => {
     "health",
   ];
 
+  // Make helper from this function
   function handleSubmit(e) {
-    console.log(Helper.handleAddExpenseSubmit(e))
-    
+    console.log(Helper.handleAddExpenseSubmit(e));
+    passData("This is the freaking data");
+    return "This is the freaking data";
   }
 
   return (

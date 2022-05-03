@@ -2,10 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./components/main/Main";
-import AddExpense from "./components/main/expense/addExpense/AddExpense";
-import EditExpense from "./components/main/expense/editExpense/EditExpense";
+import AddExpense from "./components/main/addExpense/AddExpense";
+import EditExpense from "./components/main//editExpense/EditExpense";
 
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>

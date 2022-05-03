@@ -1,0 +1,72 @@
+.expense {
+  background-color: antiquewhite;
+  display: grid;
+  border-radius: 5px;
+  margin: 2vh 0;
+  padding: 0.8em;
+  grid-template-areas:
+    "tags edit"
+    "expense edit";
+  grid-template-columns: 9fr 0.5fr;
+  .tags-container {
+    grid-area: tags;
+    .tags {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 5px 0;
+      .tag {
+        display: block;
+        padding: 4px;
+        background-color: gray;
+        margin-right: 7px;
+        border-radius: 5px;
+        color: white;
+      }
+    }
+  }
+  .expenseName {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.6em;
+    grid-area: expense;
+    // background-color: blue;
+  }
+  .expense-menu {
+    grid-area: edit;
+    height: 100%;
+    position: relative;
+    .icon {
+      font-size: 2em;
+    }
+    .display-menu {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .edit-delete {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      display: none;
+      flex-flow: column;
+      justify-content: space-between;
+      align-items: center;
+      .icon {
+        justify-self: center;
+      }
+    }
+  }
+  &:hover {
+    .display-menu {
+      display: none;
+    }
+    .edit-delete {
+      display: flex;
+    }
+  }
+}

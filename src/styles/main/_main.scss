@@ -1,4 +1,5 @@
 .expenses {
+  width: 100%;
   .nav {
     height: 8vh;
     width: 100%;
@@ -15,5 +16,10 @@
     .icon-add {
       font-size: 2em;
     }
+  }
+  .expenses-container{
+    padding: 20px;
+    // margin: 0 5vw;
+    box-sizing: border-box;
   }
 }

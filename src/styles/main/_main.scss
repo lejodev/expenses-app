@@ -1,0 +1,25 @@
+.expenses {
+  width: 100%;
+  .nav {
+    height: 8vh;
+    width: 100%;
+    padding: 0 2em;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+    .logo {
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
+    }
+    .icon-add {
+      font-size: 2em;
+    }
+  }
+  .expenses-container{
+    padding: 20px;
+    // margin: 0 5vw;
+    box-sizing: border-box;
+  }
+}

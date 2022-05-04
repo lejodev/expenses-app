@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/expenses"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "get_expenses_01_response.json",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

@@ -1,7 +1,7 @@
 name: Node continuous integration
 
 on:
-  pull_request:
+  push:
     branches: [master]
 
 jobs: 
@@ -15,3 +15,11 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+
+      - name: build and push docker image
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: alejorv8/expenses-app
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}

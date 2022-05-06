@@ -7,7 +7,7 @@ describe("Expenses main page", () => {
   it("Displays the expenses main page", () => {
     render(
       <Router>
-        <Expenses />
+        <Main />
       </Router>
     );
     expect(screen.queryByText(/expenses/i)).toBeInTheDocument();

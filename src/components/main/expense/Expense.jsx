@@ -1,12 +1,10 @@
-import React, { useState, createContext } from "react";
+import React from "react";
 import { MdModeEditOutline, MdDelete } from "react-icons/md";
 import { HiDotsHorizontal } from "react-icons/hi";
 import "../../../styles/expense/_expense.scss";
 
 const Expense = ({ expense, tags }) => {
   // const [expense, setExpense] = useState({});
-
-  const expenseContext = createContext();
 
   return (
     <div data-testid="customId" className="expense">

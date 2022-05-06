@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaPlusSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../styles/main/_main.scss";
 import Expense from "./expense/Expense";
 
 const Main = () => {
-  const [expenses, setExpenses] = useState([
+  const expenses = [
     { name: "Pub at night", tags: ["food", "recreation"] },
     { name: "Cinema", tags: ["recreation"] },
     { name: "Europe trip", tags: ["trips", "recreation"] },
-    { name: "Mercedez Benz AMG GTR Black series", tags: ["Hobbies", "Car", "Petrolhead"] },
-  ]);
+    {
+      name: "Mercedez Benz AMG GTR Black series",
+      tags: ["Hobbies", "Car", "Petrolhead"],
+    },
+  ];
   return (
     <div className="expenses">
       <nav className="nav">

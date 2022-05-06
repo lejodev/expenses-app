@@ -1,6 +1,6 @@
 import { render, screen, cleanup } from "@testing-library/react";
 // import "@testing-library/jest-dom";
-import Expenses from "../../expenses/Expenses";
+import Main from "../../main/Main"; 
 import { MemoryRouter as Router } from "react-router-dom";
 
 describe("Expenses main page", () => {

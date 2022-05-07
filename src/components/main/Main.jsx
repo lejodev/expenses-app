@@ -2,15 +2,20 @@ import React, { useState, useEffect } from "react";
 import { FaPlusSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../styles/main/_main.scss";
+import getExpenses from "./expense-service";
 import Expense from "./expense/Expense";
 
+
+
 const Main = () => {
-  const [expenses, setExpenses] = useState([
-    { name: "Pub at night", tags: ["food", "recreation"] },
-    { name: "Cinema", tags: ["recreation"] },
-    { name: "Europe trip", tags: ["trips", "recreation"] },
-    { name: "Mercedez Benz AMG GTR Black series", tags: ["Hobbies", "Car", "Petrolhead"] },
-  ]);
+
+  const [expenses, setExpenses] = useState([]);
+
+  useEffect(() => {
+    getExpenses()
+      .then(result => setExpenses(result))
+  }, [])
+
   return (
     <div className="expenses">
       <nav className="nav">
@@ -20,12 +25,8 @@ const Main = () => {
         </Link>
       </nav>
       <section className="expenses-container">
-        {expenses.map((expense) => (
-          <Expense
-            key={expense.name}
-            expense={expense.name}
-            tags={expense.tags}
-          />
+        {expenses?.map((expense) => (
+          <Expense expenseData = {expense} />
         ))}
       </section>
     </div>

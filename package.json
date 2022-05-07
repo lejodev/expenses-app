@@ -40,5 +40,8 @@
   "devDependencies": {
     "@testing-library/react": "^13.1.1",
     "react-test-renderer": "^18.1.0"
+  },
+  "publishConfig": {
+    "@julianr0223:registry": "https://npm.pkg.github.com"
   }
 }

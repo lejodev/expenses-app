@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { FaPlusSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../styles/main/_main.scss";
-import Expense from "./expense/Expense";
+import Expense from "./expense_row/Expense_row";
 import Helper from "../../util/Helper";
 
-const Main = () => {
+const Expenses = () => {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
@@ -39,4 +39,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Expenses;

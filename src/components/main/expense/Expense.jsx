@@ -1,25 +1,23 @@
-import React, { useState, createContext } from "react";
+import React from "react";
 import { MdModeEditOutline, MdDelete } from "react-icons/md";
 import { HiDotsHorizontal } from "react-icons/hi";
 import "../../../styles/expense/_expense.scss";
 
-const Expense = ({ expense, tags }) => {
+const Expense = (props) => {
   // const [expense, setExpense] = useState({});
-
-  const expenseContext = createContext();
 
   return (
     <div data-testid="customId" className="expense">
       <div className="tags-container">
         <ul className="tags">
-          {tags.map((tag) => (
+          {props.data.tags.map((tag) => (
             <li className="tag" key={tag}>
               {tag}
             </li>
           ))}
         </ul>
       </div>
-      <div className="expenseName">{expense}</div>
+      <div className="expenseName">{props.data.detail}</div>
       <div className="expense-menu">
         <div className="display-menu">
           <i className="dots icon">

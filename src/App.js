@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Expenses from "./components/expenses/Expenses";
 import AddExpense from "./components/addExpense/AddExpense";

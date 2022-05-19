@@ -5,16 +5,15 @@ import AddExpense from "./components/addExpense/AddExpense";
 import EditExpense from "./components/editExpense/EditExpense";
 
 function App() {
-  
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Expenses />} />
-          <Route path="/add" element={<AddExpense />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Expenses />}>
+          <Route path="add" element={<AddExpense />} />
+          <Route path="edit" element={<EditExpense />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

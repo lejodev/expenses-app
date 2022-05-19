@@ -1,6 +1,7 @@
 import React from "react";
 import { MdModeEditOutline, MdDelete } from "react-icons/md";
 import { HiDotsHorizontal } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import "../../../styles/expense/_expense.scss";
 
 const Expense = (props) => {
@@ -25,9 +26,9 @@ const Expense = (props) => {
           </i>
         </div>
         <div className="edit-delete">
-          <i className="icon eidt">
-            <MdModeEditOutline />
-          </i>
+          <Link to="/edit">
+            <MdModeEditOutline className="icon edit" />
+          </Link>
           <i className="icon delete">
             <MdDelete />
           </i>

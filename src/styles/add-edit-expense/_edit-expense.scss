@@ -1,0 +1,35 @@
+.edit-expense {
+  position: absolute;
+  top: 0;
+  background-color: rgba($color: #ad7a1c, $alpha: 0.4);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .edit-expense-container {
+    padding: 2em;
+    column-gap: 1em;
+    display: inherit;
+    flex-flow: column;
+    justify-content: inherit;
+    width: 60%;
+    height: 60vh;
+    background-color: aqua;
+    position: relative;
+    .close {
+      position: absolute;
+      top: 0.2em;
+      right: 0.2em;
+      font-size: 2em;
+      color: black;
+      &:visited {
+        background-color: black;
+      }
+    }
+    .btn-primary {
+      width: 100%;
+    }
+  }
+}

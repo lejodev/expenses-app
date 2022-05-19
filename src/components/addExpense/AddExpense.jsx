@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Helper from "../../../util/Helper";
+import React, { useState } from "react";
+import Helper from "../../util/Helper";
 
 const AddExpense = ({ passData }) => {
   const [expense, setExpense] = useState("");

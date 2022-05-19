@@ -1,21 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Main from "./components/main/Main";
-import AddExpense from "./components/main/addExpense/AddExpense";
-import EditExpense from "./components/main//editExpense/EditExpense";
+import Expenses from "./components/expenses/Expenses";
+import AddExpense from "./components/addExpense/AddExpense";
+import EditExpense from "./components/editExpense/EditExpense";
 
 function App() {
-  
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/add" element={<AddExpense />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Expenses />}>
+          <Route path="add" element={<AddExpense />} />
+          <Route path="edit" element={<EditExpense />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

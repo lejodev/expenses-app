@@ -67,6 +67,10 @@
     }
     .edit-delete {
       display: flex;
+      .icon {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }

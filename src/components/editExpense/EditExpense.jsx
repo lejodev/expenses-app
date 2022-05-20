@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaWindowClose } from "react-icons/fa";
 import "../../styles/add-edit-expense/_edit-expense.scss";
 
-const EditExpense = (props) => {
+const EditExpense = () => {
   return (
     <div className="edit-expense">
       <div className="edit-expense-container">

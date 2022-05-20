@@ -16,7 +16,7 @@
     justify-content: inherit;
     width: 60%;
     height: 60vh;
-    background-color: aqua;
+    background-color: #f3d0dc;
     position: relative;
     .close {
       position: absolute;
@@ -30,6 +30,7 @@
     }
     .btn-primary {
       width: 100%;
+      background-color: #ad1c1c;
     }
   }
 }

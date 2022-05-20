@@ -1,25 +1,29 @@
 .expenses {
   width: 100%;
   .nav {
-    height: 8vh;
+    height: 12vh;
     width: 100%;
     padding: 0 2em;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    background-color: aquamarine;
+    background-color: #e0202a;
     .logo {
+      font-size: 2em;
       border-top: 2px solid white;
       border-bottom: 2px solid white;
     }
     .icon-add {
       font-size: 2em;
+      color: #f1eaec;
     }
   }
   .expenses-container{
+    min-height: 88vh;
     padding: 20px;
     // margin: 0 5vw;
     box-sizing: border-box;
+    background-color: #f1eaea;
   }
 }

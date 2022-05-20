@@ -19,12 +19,12 @@ This is the client version of the expenses app.
 
 - Then. You can run your this project on `http://localhost:3001`
 
-## Run locally with IDE
+## Run locally with NPM
 
 - Clone this repository on your machine
 
-- Open this repo
+- Open a terminal in the folder of the project
 
-- Once inside this repo. Open the terminal and type   `npm install`
+- Once inside this repo run `npm install`
 
-- Then, type npm run start to run this project on your default browser.
+- Then, type run `npm run start` to run this project on your default browser.

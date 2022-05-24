@@ -7,6 +7,11 @@ import "../../../styles/expense/_expense.scss";
 const Expense = (props) => {
   // const [expense, setExpense] = useState({});
 
+  const myData = {
+    name: "Some thing",
+    price: 123,
+  };
+
   return (
     <div data-testid="customId" className="expense">
       <div className="tags-container">
@@ -26,7 +31,7 @@ const Expense = (props) => {
           </i>
         </div>
         <div className="edit-delete">
-          <Link to="/edit">
+          <Link to="/edit" state={{ title: "EDIT" }}>
             <MdModeEditOutline className="icon edit" />
           </Link>
           <i className="icon delete">

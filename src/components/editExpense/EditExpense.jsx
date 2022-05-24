@@ -9,15 +9,18 @@ import "react-datepicker/dist/react-datepicker.css";
 const EditExpense = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [expenseDescription, setExpenseDescription] = useState("");
-  const [title, setTitle] = useState();
+  const [popuptitle, setPopupTitle] = useState();
+  const [defaultFormValues, setDefaultFormValues] = useState({});
 
   const location = useLocation();
+
   useEffect(() => {
-    return () => {
-      const { title } = location.state;
-      setTitle(title);
-    };
-  }, []);
+    const { title, expense } = location.state;
+    setPopupTitle(title);
+    if (expense !== undefined) {
+      setDefaultFormValues(expense);
+    }
+  }, [location.state]);
 
   // Future features: Put this function on the helper file and add the (add tags feature)
   function handleSubmit(e) {
@@ -35,7 +38,7 @@ const EditExpense = () => {
         <Link to="/">
           <FaWindowClose className="close" />
         </Link>
-        <h1 className="title">{title} EXPENSE</h1>
+        <h1 className="popuptitle">{popuptitle} EXPENSE</h1>
         <div className="details"></div>
         <Form onSubmit={handleSubmit}>
           <Form.Group htmlFor="inputEpense">
@@ -47,17 +50,18 @@ const EditExpense = () => {
                 onChange={(e) => {
                   setExpenseDescription(e.target.value);
                 }}
+                value={expenseDescription || defaultFormValues.detail || ""}
               ></Form.Control>
             </FloatingLabel>
           </Form.Group>
           <Row>
             <Col xs={9}>
-              {/* <Form.Control type="text" placeholder="DATE"></Form.Control> */}
               <DatePicker
                 selected={startDate}
                 onChange={(date) => {
                   setStartDate(date);
                 }}
+                value={defaultFormValues.date || "" || startDate}
               ></DatePicker>
             </Col>
             <Col>

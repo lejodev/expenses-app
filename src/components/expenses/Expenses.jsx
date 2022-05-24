@@ -26,7 +26,7 @@ const Expenses = () => {
     <div className="expenses">
       <nav className="nav">
         <div className="logo">EXPENSES</div>
-        <Link to="/edit">
+        <Link to="/edit" state={{ title: "ADD" }}>
           <FaPlusSquare className="icon-add" />
         </Link>
       </nav>
